@@ -1,0 +1,73 @@
+player(X) 
+club(X)
+club(arsenal)
+club(aston_villa)
+club(bournemouth)
+club(brentford)
+club(brighton)
+club(chelsea)
+club(crystal_palace)
+club(everton)
+club(fulham)
+club(ipswich_town)
+club(leicester_city)
+club(liverpool)
+club(manchester_city)
+club(manchester_united)
+club(newcastle_united)
+club(nottingham_forest)
+club(southampton)
+club(tottenham_hotspur)
+club(west_ham_united)
+club(wolverhampton_wanderers)
+manager(X)
+manager(mikel_arteta)
+manager(unai_emery)
+manager(andoni_iraola)
+manager(thomas_frank)
+manager(fabian_hurzeler)
+manager(enzo_maresca)
+manager(oliver_glassner)
+manager(david_moyes)
+manager(marco_silva)
+manager(kieran_mckenna)
+manager(ruud_van_nistelrooy)
+manager(arne_slot)
+manager(pep_guardiola)
+manager(ruben_amorim)
+manager(eddie_howe)
+manager(nuno_espirito_santo)
+manager(ivan_juric)
+manager(ange_postecoglou)
+manager(graham_potter)
+manager(vitor_pereira)
+"manages(manager(X),club(Y))"
+"manages(mikel_arteta, arsenal)"
+"manages(unai_emery, aston_villa)"
+"manages(andoni_iraola, bournemouth)"
+"manages(thomas_frank, brentford)"
+"manages(fabian_hurzeler, brighton)"
+"manages(enzo_maresca, chelsea)"
+"manages(oliver_glassner, crystal_palace)"
+"manages(david_moyes, everton)"
+"manages(marco_silva, fulham)"
+"manages(kieran_mckenna, ipswich_town)"
+"manages(ruud_van_nistelrooy, leicester_city)"
+"manages(arne_slot, liverpool)"
+"manages(pep_guardiola, manchester_city)"
+"manages(ruben_amorim, manchester_united)"
+"manages(eddie_howe, newcastle_united)"
+"manages(nuno_espirito_santo, nottingham_forest)"
+"manages(ivan_juric, southampton)"
+"manages(ange_postecoglou, tottenham_hotspur)"
+"manages(graham_potter, west_ham_united)"
+"manages(vitor_pereira, wolverhampton_wanderers)"
+"rival(X,Y)->rival(Y,X)"
+"rival(arsenal,tottenham_hotspur)"
+"rival(manchester_united,manchester_city)"
+"rival(liverpool,everton)"
+"rival(liverpool,manchester_united)"
+"rival(chelsea, tottenham_hotspur)"
+"rival(west_ham_united,tottenham_hotspur)"
+player(X)-> -manager(X)
+player(X)-> -club(X)

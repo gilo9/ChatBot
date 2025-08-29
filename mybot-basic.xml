@@ -1,0 +1,169 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+<!-- Greetings and Politeness -->
+<category>
+  <pattern>MY NAME IS *</pattern>
+  <template>
+    <think><set name="name"><star/></set></think>
+    Nice to meet you, <get name="name"/>!
+    <srai>HELLO</srai>
+    </template>
+</category>
+
+<category>
+  <pattern>* MY NAME IS *</pattern>
+  <template>
+    <srai>MY NAME IS <star index="2"/></srai>
+    </template>
+</category>
+
+<category> <pattern> HELLO </pattern>
+  <template>
+  <random>
+  <li> Hello! What can I tell you about Football Players</li>
+  </random>
+ </template> </category>
+
+
+<category> <pattern> HELLO *  </pattern>
+  <template><srai>HELLO</srai></template> </category>
+
+<category> <pattern> HI </pattern>
+  <template><srai>HELLO</srai></template> </category>
+
+<category> <pattern> HI * </pattern>
+  <template><srai>HELLO</srai></template> </category>
+
+<category> <pattern> HOW ARE YOU </pattern>
+  <template>I'm functioning within normal parameters, thanks for asking.</template></category>
+
+<category><pattern> I AM FINE </pattern>
+  <template>That's good to know. What would you like to discuss about?</template></category>
+
+<category><pattern> BYE </pattern>
+  <template>#0$Bye! Nice talking to you. You take care now <get name="name"/>.</template></category>
+
+<category><pattern> GOODBYE </pattern>
+  <template><srai>BYE</srai></template></category>
+
+<category><pattern> EXIT </pattern>
+  <template><srai>BYE</srai></template></category>
+
+<category> <pattern> THANKS </pattern>
+  <template>You are welcome.</template></category>
+
+<category> <pattern> THANK YOU </pattern>
+  <template><srai>THANKS</srai></template></category>
+
+<category> <pattern> CHEERS </pattern>
+  <template>Sure mate.</template></category>
+
+<category> <pattern> CHEERS * </pattern>
+  <template>Sure mate.</template></category>
+
+<!--- Wikipedia API -->
+<category><pattern> WHAT IS A * </pattern>
+  <template>#1$a*<star index="1"/></template></category>
+
+<category><pattern> WHAT IS AN * </pattern>
+  <template><srai>WHAT IS A <star/></srai></template></category>
+
+<category><pattern> WHAT IS * </pattern>
+  <template><srai>WHAT IS A <star/></srai></template></category>
+
+<category><pattern> DEFINE * </pattern>
+  <template><srai>WHAT IS A <star/></srai></template></category>
+
+<category><pattern> WHO IS * </pattern>
+  <template><srai>WHAT IS A <star/></srai></template></category>
+
+<!-- Default reaction -->
+<category><pattern> * </pattern>
+  <template>#99$a*<star/></template></category>
+
+
+<!--- Football related questions -->
+
+
+<category><pattern>MY FAVOURITE CLUB IS *</pattern>
+<template><think><set name="team"><star/></set></think>I will remember that. I think <star/> is an amazing team!!</template></category>
+
+<category><pattern>I SUPPORT *</pattern>
+<template>MY FAVOURITE CLUB IS <star/></template></category>
+
+<category><pattern>TELL ME A FOOTBALL FACT</pattern>
+<template>TELL ME A FUN FACT</template></category>
+
+<category><pattern>TELL ME A FUN FACT</pattern>
+<template>
+  <random>
+    <li>The highest scoring game was Portsmouth 7-4 Reading in 2007.</li>
+    <li> The Premier League is broadcast to 643 million homes in 212 territories.</li>
+    <li>Derby County won the least Premier League points in a single season. In the 2007/08 season, Derby County finished with the fewest amount of points in a Premier League season – 11.</li>
+    <li>Manchester City won the most Premier League points in a single season. In the 2017/18 season they won the league with 100 points!</li>
+    <li>Petr Cech has kept the most Premier League Clean Sheets. A Clean Sheet is when a goalkeeper doesn’t concede a goal. Petr Cech kept 202 clean sheets in the Premier League for Chelsea (162) and Arsenal (40).</li>
+    <li>Gareth Barry has made the most Premier League appearances. The former England midfielder made 653 appearances in the league.</li>
+    <li>Only SIX teams have never been relegated from the Premier League. Those teams are: Arsenal, Chelsea, Everton, Liverpool, Manchester United and Tottenham Hotspur.</li>
+    <li>The Premier League started in 1992. The first game was played on 15th August 1992.</li>
+    <li>There are three players who have scored, assisted, and scored their own goals in just one game of EPL. These are Kevin Davies, Gareth Bale, and Wayne Rooney. Davies did it against Aston Villa in 2008, Bale did it against Liverpool in 2012, and Rooney did it against Stoke City in 2012</li>
+    <li>The very first EPL goal was for Sheffield United, which was scored by Brian Deane. It was against Manchester United on August 15, 1992, the year in which the Premier League was founded.</li>
+    <li>Ryan Giggs is the player who has been substituted 134 times, which is the most number of times than any other player in the English Premier League. Currently, Giggs is the manager of the Wales national team.</li>
+    <li>Mario Balotelli has just one goal assist to his name out of his 70 appearances in the English Premier League. This was for the title-winning goal of Sergio Aguero vs. QPR (Queens Park Rangers F.C.) in the final seconds of the 2011/12 season match. This assist is deemed as one of the best, which won Manchester City its first title within 44 years</li>
+  </random>
+</template></category>
+
+<category><pattern>WHO IS THE BEST PLAYER IN THE WORLD</pattern>
+  <template>Some may say Lionel Messi, Others may say Cristiano Ronaldo or Maybe even Pele. All three are known for their Outstanding International and Domestic Careers. Honourable mentions include Rodri and Vinicious Junior, Ronaldihno, Neymar </template></category>
+
+<category><pattern>WHO IS THE BEST TEAM</pattern>
+  <template>Real Madrid has won the most UCL trophies, however some may say Barcelona or Manchester United.  </template></category>
+
+<category><pattern>MY FAVOURITE PLAYER IS * </pattern>
+<template> <star/> is  a great player! Would like you to learn more about them?</template></category>
+
+<category><pattern>WHO HAS WON THE MOST WORLD CUPS</pattern>
+  <template>Brazil has won the most World Cups. They have won the tournament 5 times!</template></category>
+
+<!-- Football API-->
+<category><pattern>WHAT ARE THE LEAGUE STANDINGS</pattern>
+<template>#2$standings*</template></category>
+
+<category><pattern>WHO IS TOP OF THE LEAGUE</pattern>
+<template>#2$standings*1</template></category>
+
+<category><pattern>WHO ARE THE TOP SCORERS</pattern>
+<template>#2$scorers*10</template></category>
+
+<category><pattern>WHO IS THE TOP SCORER</pattern>
+<template>#2$scorers*1</template></category>
+
+<category><pattern>WHAT TEAM DOES * PLAY FOR</pattern>
+<template>#2$rvrsteam*<star/> </template></category>
+
+<category><pattern>WHO IS THE MANAGER OF *</pattern>
+<template> #2$coach*<star/> </template></category>
+
+<category><pattern>WHO PLAYS FOR *</pattern>
+<template>#2$team*<star/></template></category>
+
+<category><pattern>WHAT WAS THE SCORE OF * LAST GAME</pattern>
+<template>#2$match*<star/></template></category>
+
+<category><pattern>WHO IS * PLAYING NEXT</pattern>
+<template>#2$matches*<star/></template></category>
+
+<!-- Logic Patterns-->
+
+<category><pattern>I KNOW THAT * IS NOT *</pattern>
+  <template>#31$-<star index="1"/> is not <star index="2"/></template></category>
+
+<category><pattern> I KNOW THAT * IS *</pattern>
+  <template>#31$<star index="1"/> is <star index="2"/></template></category>  
+
+<category><pattern> CHECK THAT * IS *</pattern>
+  <template>#32$<star index="1"/> is <star index="2"/></template></category>  
+
+<category><pattern>WHAT LEAGUE IS THIS TEAM FROM *</pattern>
+<template>#33$<star/></template></category>
+
+</aiml>
