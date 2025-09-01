@@ -15,7 +15,7 @@ This project is an intelligent chatbot system focused on football (soccer), desi
 - [Sample Workflows](#sample-workflows)
 - [Learning Outcomes](#learning-outcomes)
 - [Extra Functionalities](#extra-functionalities)
-- [Documentation & Demo](#documentation--demo)
+- [Documentation](#documentation)
 
 ---
 
@@ -109,9 +109,10 @@ This project is an intelligent chatbot system focused on football (soccer), desi
 
 ---
 
-## Documentation & Demo
+## Documentation
 
 A full documentation is provided within the repository.
+
 ---
 
 ## License
